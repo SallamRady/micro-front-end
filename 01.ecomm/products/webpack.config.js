@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const federaionModule = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
   mode: "development",
@@ -7,7 +8,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.htm",
+      template: "./public/index.html",
     }),
+    new federaionModule({
+      name:'productsList',
+      filename:'remoteEntry.js',
+      exposes:{
+          './ProductsIndex':'./src/index.js'
+      }
+  }),
   ],
 };
