@@ -11,9 +11,10 @@ module.exports = {
             template: './public/index.html'
         }),
         new federationModule({
-            name:'container',
-            remotes:{
-                Products:'productsList@http://localhost:8081/remoteEntry.js'
+            name: 'container',
+            remotes: {
+                Products: 'productsList@http://localhost:8081/remoteEntry.js',
+                Cart: 'cart@http://localhost:8082/remoteEntry.js',
             }
         })
     ]
