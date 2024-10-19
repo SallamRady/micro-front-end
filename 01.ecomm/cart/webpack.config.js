@@ -11,11 +11,12 @@ module.exports = {
       template: "./public/index.html",
     }),
     new federaionModule({
-      name:'cart',
-      filename:'remoteEntry.js',
-      exposes:{
-          './cartshow':'./src/index.js'
-      }
-  }),
+      name: 'cart',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './cartshow': './src/index.js'
+      },
+      shared: ['@faker-js/faker']
+    }),
   ],
 };

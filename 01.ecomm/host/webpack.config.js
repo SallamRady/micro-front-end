@@ -15,7 +15,8 @@ module.exports = {
             remotes: {
                 Products: 'productsList@http://localhost:8081/remoteEntry.js',
                 Cart: 'cart@http://localhost:8082/remoteEntry.js',
-            }
+            },
+            // shared: ['@faker-js/faker']
         })
     ]
 }
