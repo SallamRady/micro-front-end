@@ -1,4 +1,9 @@
-import 'Products/ProductsIndex';
-import 'Cart/cartshow';
+import { mount as productsMount } from 'Products/ProductsIndex';
+import { mount as cartMount } from 'Cart/cartshow';
 
-console.log('Host Product Say Hi From Console:)')
+
+const productsDiv = document.getElementById('products-list');
+const cartDiv = document.getElementById('cart-container');
+
+productsMount(productsDiv)
+cartMount(cartDiv)
